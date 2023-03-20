@@ -1,6 +1,9 @@
-﻿# Husk å koble til :)
-# Connect-ExchangeOnline
+﻿<#
+This script will export a list of users with Inbox rule as a CSV file
+Useful to check if users have a malicious inbox rule
+#>
 
+Connect-ExchangeOnline
 
 $Folder = "C:\temp"
 $OutputFile = ("$Folder\$MainDomain-MailboxRules.csv")

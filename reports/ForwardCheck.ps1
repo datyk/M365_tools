@@ -1,5 +1,7 @@
-#check tennant for forwarding and save the result as a CSV file
+<#
+This script will export a list of users and mark users with email forwarding as a CSV file.
 
+#>
 Connect-ExchangeOnline
 $Folder = "C:\temp"
 $OutputFile = ("$Folder\$MainDomain-FwdCheck.csv")
