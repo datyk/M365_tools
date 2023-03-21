@@ -5,10 +5,10 @@ Useful to check if users have a malicious inbox rule
 
 Connect-ExchangeOnline
 
-$Folder = "C:\temp"
-$OutputFile = ("$Folder\$MainDomain-MailboxRules.csv")
 $MainDomain = Get-AcceptedDomain | Where-Object Default -Match True | Select-Object -ExpandProperty Name
 $Mailboxes = Get-Mailbox -ResultSize Unlimited
+$Folder = "C:\temp"
+$OutputFile = ("$Folder\$MainDomain-MailboxRules.csv")
 
 Try {
 foreach ($Mailbox in $Mailboxes) {
